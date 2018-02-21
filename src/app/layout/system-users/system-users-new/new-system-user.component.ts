@@ -14,6 +14,8 @@ import { error, IButton } from 'selenium-webdriver';
 import { Options } from 'selenium-webdriver/opera';
 import { RequiredValidator } from '@angular/forms/src/directives/validators';
 import { MaskService } from '../../../shared/services/mask-forms.service';
+import { AuditService } from '../../../shared/services/audit.service';
+import { AuditModels } from '../../../shared/models/audit.models';
 
 @Component({
   selector: 'app-new-user',
@@ -31,13 +33,18 @@ export class NewSystemUserComponent implements OnInit {
   public errorAddress: boolean = false;
   public textErrorAddress: string = "";
 
+  public userName: string;
+  public userCpf: string;
+
   //booleanas -> controla telas
   public personalData: boolean = true;
   public addresses: boolean = false;
   public contacts: boolean = false;
   public permissions: boolean = false;
 
-  constructor(private router: Router, private systemUsersService: SystemUsersService, private maskService: MaskService) {
+  constructor(private router: Router, private systemUsersService: SystemUsersService, 
+    private auditService: AuditService, private maskService: MaskService) {
+
     this.formNewUser = new FormGroup({
       name: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.pattern(/\S+@\S+\.\S+/)], ),
@@ -53,6 +60,9 @@ export class NewSystemUserComponent implements OnInit {
 
 
   ngOnInit() {
+
+    this.userName = localStorage.getItem('name');
+    this.userCpf = localStorage.getItem('cpf');
 
     this.formNewUser.active = true;
     this.formNewUser.controls.active.setValue("ATIVADO");
@@ -289,8 +299,23 @@ export class NewSystemUserComponent implements OnInit {
 
     );
 
+    var date = new Date;
+    var newAudit: AuditModels = new AuditModels(
+
+      this.userName,
+      this.userCpf,
+      date,
+      '193.168.1.1', // Terá que ver um jeito de pegar o IP da maquina do usuario
+      'Transporte', // Terá que ver um jeito de pegar a sessão que o usuario está utilizando
+      'CADASTRO USUARIO' // Ficará fixo, pois todas as funções do CRUD terá, então é só alterar em cada função
+    );
+
     this.systemUsersService.registerUsersAdm(newUser, this.token)
       .subscribe((apiResponse: SystemUsers) => {
+        this.auditService.registerAudit(newAudit).subscribe((apiResponse: AuditModels) => {
+        }, (error: any) =>{
+          console.log(error)
+        });
 
         alert('Usuário Cadastrado com sucesso!');
         this.router.navigateByUrl('/system-users/systemUsersHome'); //ROTEAMENTO

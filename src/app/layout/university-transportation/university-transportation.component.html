@@ -1,10 +1,10 @@
 <div class="container">
-  <h3  style="text-align:center">CADASTRO TRANSPORTE UNIVERSITÁRIO</h3>
+  <h3 style="text-align:center">CADASTRO TRANSPORTE UNIVERSITÁRIO</h3>
   <hr class="header">
 
   <ul class="steps">
     <li [class.is-active]="visualizationPessoais">Dados Pessoais</li>
-    <li [class.is-active]="visualizationEnd">Endereços</li>
+    <li [class.is-active]="visualizationEnd">Endereço</li>
     <li [class.is-active]="visualizationInsti">Informação da Instituição</li>
     <li [class.is-active]="visualizationDoc">Importação de Documentos</li>
   </ul>
@@ -110,14 +110,18 @@
 
                   <!--********************************ENDEREÇOS******************************* -->
                   <div *ngIf="visualizationEnd">
-                    <h5>Endereço</h5>
-                    <hr>
+                    <div class="row justify-content-end" style="margin-bottom:-3em">
+                      <div class="col-4" style="margin-right: 5px; font-size:16px; font-weight:bold">
+                        Passo 2
+                        <hr>
+                      </div>
+                    </div>
                     <div class="row">
                       <div class="form-group col-md-6">
                         <label class="control-label">Logradouro</label>
                         <input aria-describedby="addon-right addon-left" type="text" class="form-control">
                       </div>
-Oiiiiiiiiiiiiiii
+
                       <div class="form-group col-md-2">
                         <label class="control-label">Nº</label>
                         <input aria-describedby="addon-right addon-left" type="text" class="form-control">
@@ -138,8 +142,12 @@ Oiiiiiiiiiiiiiii
 
                   <!--********************************DADOS DA INSTITUIÇÃO******************************* -->
                   <div *ngIf="visualizationInsti">
-                    <h5>Dados da Instituição</h5>
-                    <hr>
+                    <div class="row justify-content-end" style="margin-bottom:-3em">
+                      <div class="col-4" style="margin-right: 5px; font-size:16px; font-weight:bold">
+                        Passo 3
+                        <hr>
+                      </div>
+                    </div>
                     <div class="row">
 
                       <div class="form-group col-md-6">
@@ -274,13 +282,59 @@ Oiiiiiiiiiiiiiii
                   </div>
                   <!--********************************DOCUMENTOS******************************* -->
                   <div *ngIf="visualizationDoc">
-                    <h5>Importação de Documentos</h5>
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-6">
-
+                    <div class="row justify-content-end" style="margin-bottom:-3em">
+                      <div class="col-4" style="margin-right: 5px; font-size:16px; font-weight:bold">
+                        Passo 4
+                        <hr>
                       </div>
                     </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <fieldset class="form-group">
+                          <label for="exampleInputFile">RG</label>
+                          <input type="file" class="form-control-file" id="exampleInputFile">
+                        </fieldset>
+                      </div>
+
+                      <div class="col-md-6">
+                        <fieldset class="form-group">
+                          <label for="exampleInputFile">CPF</label>
+                          <input type="file" class="form-control-file" id="exampleInputFile">
+                        </fieldset>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                          <fieldset class="form-group">
+                            <label for="exampleInputFile">Conprovante de Residencia</label>
+                            <input type="file" class="form-control-file" id="exampleInputFile">
+                          </fieldset>
+                        </div>
+  
+                        <div class="col-md-6">
+                          <fieldset class="form-group">
+                            <label for="exampleInputFile">Comprovante de Matricula</label>
+                            <input type="file" class="form-control-file" id="exampleInputFile">
+                          </fieldset>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-6">
+                            <fieldset class="form-group">
+                              <label for="exampleInputFile">Cadastro Municipal</label>
+                              <input type="file" class="form-control-file" id="exampleInputFile">
+                            </fieldset>
+                          </div>
+    
+                          <div class="col-md-6">
+                            <fieldset class="form-group">
+                              <label for="exampleInputFile">Foto 3x4</label>
+                              <input type="file" class="form-control-file" id="exampleInputFile">
+                            </fieldset>
+                          </div>
+                        </div>
 
                     <div class="text-center">
                       <button type="submit" class="btn btn-info float-right">Cadastrar</button>
