@@ -1,0 +1,128 @@
+h1,h2,h3,h4{
+    font-family: Catamaran,Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.text-secondary {
+    color: #2c3e50!important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.floating-label-form-group {
+    position: relative;
+    border-bottom: 1px solid #e9ecef;
+}
+.floating-label-form-group input, .floating-label-form-group textarea {
+    font-size: 1.5em;
+    position: relative;
+    z-index: 1;
+    padding-right: 0;
+    padding-left: 0;
+    resize: none;
+    border: none;
+    border-radius: 0;
+    background: 0 0;
+    box-shadow: none!important;
+}
+.card label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4d4848;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+ //arrumar 
+.card{
+    border : none;
+    margin-left: -15px;
+} 
+.card-header{
+    background-color:#18638c;
+    height: 50px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+.table{
+    font-size: 14px;
+    td , #periodosOnibus{
+        text-align: center;
+   }
+    .form-check-input{
+        width: 15px;
+        height: 15px;
+   }
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #efefef;
+}
+/* .wrapper {
+    width: 96%;
+    background: rgba(228, 230, 231, 0);
+    margin: 2% auto;
+    padding: 1.5em;
+    box-shadow: 0px 1px 3px #ddd;
+    margin-bottom: 0px;
+    padding-bottom: 8px;
+}
+*/
+.container{
+    margin: 2% auto;
+    padding: 1.5em;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+p, li, a{
+    font-size: 16px;
+}
+/* STEPS */
+.steps{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    text-align: center;
+}
+.steps li{
+    float: left;
+    // display: inline-block;
+    margin: 20px;
+    color: #ccc;
+    padding-bottom: 5px;
+}
+.steps li.is-active{
+    border-bottom: 1px solid #3498db;
+    color: #3498db;
+}
+button{
+    border-radius: 5%;
+}
+hr.header{
+    border : 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/* hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8c8c inset;
+}
+*/

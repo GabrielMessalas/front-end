@@ -1,0 +1,29 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight:
+ isActive}">
+
+    <ul class="list-group">
+
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" title="Principal" class="list-group-item">
+
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
+
+        </a>
+        <a [routerLink]="['/system-users']" [routerLinkActive]="['router-link-active']" title="Usuários" class="list-group-item"
+        
+      >
+
+            <i class="fa fa-wrench"></i>&nbsp;{{ 'System Users' | translate }}
+
+        </a>
+
+        <a [routerLink]="['/university-transportation']" [routerLinkActive]="['router-link-active']" title="Transporte Universitário" class="list-group-item">
+            
+                        <i class="fa fa-wrench"></i>&nbsp;{{ 'University Transportation' | translate }}
+            
+                    </a>
+
+    </ul>
+
+</nav>
+
+

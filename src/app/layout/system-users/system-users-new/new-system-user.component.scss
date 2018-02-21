@@ -1,0 +1,129 @@
+.btn-primary{
+  background-color: #18638c;
+}
+.btn-address{
+  border-radius: 20px;
+  background-color: #18638c;
+  color:white;
+}
+.div-address{
+  text-align:right; 
+
+}
+.custom-select{
+  width: 110%;
+}
+
+#divAdicionarTelefone{
+  margin-right: inherit;
+} 
+
+#btnAddPhoneToForm{
+  float: left;
+}
+
+// ************ Validar (Habilitado/Desabilitado) *************
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 47px;
+  height: 22px;
+  margin-top: 1%;
+    margin-left: 37%;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2481b3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* *************************************************************** */
+
+/* ********************* Layout página  e listas **************************************/ 
+.container{
+  margin: 2% auto;
+  padding: 1.5em;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+p, li, a{
+  font-size: 16px;
+}
+/* STEPS */
+.steps{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  text-align: center;
+}
+.steps li{
+  float: left;
+  // display: inline-block;
+  margin: 20px;
+  color: #ccc;
+  padding-bottom: 5px;
+}
+.steps li.is-active{
+  border-bottom: 1px solid #3498db;
+  color: #3498db;
+}
+button{
+  border-radius: 5%;
+}
+hr.header{
+  border : 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/* hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8c8c inset;
+}
+*/
