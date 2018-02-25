@@ -1,15 +1,15 @@
 <div class="container">
   <h3 style="text-align:center">CADASTRO TRANSPORTE UNIVERSITÁRIO</h3>
   <hr class="header">
-
+ 
   <ul class="steps">
     <li [class.is-active]="visualizationPessoais">Dados Pessoais</li>
     <li [class.is-active]="visualizationEnd">Endereço</li>
     <li [class.is-active]="visualizationInsti">Informação da Instituição</li>
     <li [class.is-active]="visualizationDoc">Importação de Documentos</li>
   </ul>
-
-
+ 
+ 
   <div class="content" style=" margin-top: 10px;">
     <div class="container-fluid">
       <div class="row">
@@ -26,21 +26,21 @@
                         <hr>
                       </div>
                     </div>
-
+ 
                     <div class="row">
                       <div class="form-group col-md-4">
                         <fieldset class="form-group">
                           <label class="radio-inline">
                             <input class="ng-tns-c9-2" checked="" id="optionsRadiosInline1" name="optionsRadiosInline" type="radio" value="option1">Estudante
                           </label>
-
+ 
                           <label class="radio-inline">
                             <input class="ng-tns-c9-2" id="optionsRadiosInline2" name="optionsRadiosInline" type="radio" value="option2"> Professor
                           </label>
                         </fieldset>
                       </div>
                     </div>
-
+ 
                     <div class="row">
                       <div class="form-group col-md-12">
                         <label class="control-label">Nome Completo</label>
@@ -48,34 +48,34 @@
                           d>
                       </div>
                     </div>
-
-
+ 
+ 
                     <div class="row">
                       <div class="form-group col-md-6">
                         <label class="control-label">RG</label>
                         <input aria-describedby="addon-right addon-left" type="text" disabled="disabled" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-2">
                         <label class="control-label">UF</label>
                         <input aria-describedby="addon-right addon-left" type="text" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-4">
                         <label class="control-label">Data de Expedição</label>
                         <input aria-describedby="addon-right addon-left" type="email" class="form-control">
                       </div>
                     </div>
-
+ 
                     <div class="row">
                       <div class="form-group col-md-6">
                         <label class="control-label">CPF</label>
                         <input aria-describedby="addon-right addon-left" type="text" disabled="disabled" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-6">
                         <label class="control-label">Tipo Sanguíneo</label>
-
+ 
                         <select class="custom-select col-md-6">
                           <option value="INVALID" selected>Escolha um tipo</option>
                           <option value="RESIDENCIAL">A+</option>
@@ -90,28 +90,28 @@
                         </select>
                       </div>
                     </div>
-
+ 
                     <div class="row">
                       <div class="form-group col-md-6">
                         <label class="control-label">Nome da Mãe</label>
                         <input aria-describedby="addon-right addon-left" type="text" placeholder="Fulano de Tal" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-6">
                         <label class="control-label">Telefone para Contato</label>
                         <input aria-describedby="addon-right addon-left" type="text" placeholder="Fulano de Tal" class="form-control">
                       </div>
                     </div>
-
+ 
                     <div class="text-center">
                       <button class="btn btn-info float-right" type="button" (click)="openVisualizationForms('personalData', 'next')">Proximo</button>
                     </div>
                   </div>
-
+ 
                   <!--********************************ENDEREÇOS******************************* -->
                   <div *ngIf="visualizationEnd">
-                    <div class="row justify-content-end" style="margin-bottom:-3em">
-                      <div class="col-4" style="margin-right: 5px; font-size:16px; font-weight:bold">
+                    <div class="row justify-content-end">
+                      <div class="col-4" style="margin-bottom: 5px; font-size:16px; font-weight:bold">
                         Passo 2
                         <hr>
                       </div>
@@ -121,38 +121,38 @@
                         <label class="control-label">Logradouro</label>
                         <input aria-describedby="addon-right addon-left" type="text" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-2">
                         <label class="control-label">Nº</label>
                         <input aria-describedby="addon-right addon-left" type="text" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-4">
                         <label class="control-label">Bairro</label>
                         <input aria-describedby="addon-right addon-left" type="text" class="form-control">
                       </div>
-
-
+ 
+ 
                     </div>
                     <div class="text-center">
                       <button class="btn btn-info float-left" type="button" (click)="openVisualizationForms('address', 'previous')">Anterior</button>
                       <button class="btn btn-info float-right" type="button" (click)="openVisualizationForms('address', 'next')">Proximo</button>
                     </div>
                   </div>
-
+ 
                   <!--********************************DADOS DA INSTITUIÇÃO******************************* -->
                   <div *ngIf="visualizationInsti">
-                    <div class="row justify-content-end" style="margin-bottom:-3em">
-                      <div class="col-4" style="margin-right: 5px; font-size:16px; font-weight:bold">
+                    <div class="row justify-content-end">
+                      <div class="col-4" style="margin-bottom: 5px; font-size:16px; font-weight:bold">
                         Passo 3
                         <hr>
                       </div>
                     </div>
                     <div class="row">
-
+ 
                       <div class="form-group col-md-6">
                         <label class="control-label">Nome da Instituição</label>
-
+ 
                         <select class="custom-select col-md-6">
                           <option value="INVALID" selected>Escolha um nome</option>
                           <option value="RESIDENCIAL">UFMS</option>
@@ -164,12 +164,12 @@
                           <option value="CELULAR-RECADO">FIU</option>
                           <option value="CELULAR-RECADO">FIRB</option>
                         </select>
-
+ 
                       </div>
-
+ 
                       <div class="form-group col-md-6">
                         <label class="control-label">Cidade da Instituição</label>
-
+ 
                         <select class="custom-select col-md-6">
                           <option value="INVALID" selected>Escolha uma cidade</option>
                           <option value="RESIDENCIAL">TRÊS LAGOAS - MS </option>
@@ -179,31 +179,31 @@
                         </select>
                       </div>
                     </div>
-
+ 
                     <div class="row">
                       <div class="form-group col-md-7">
                         <label class="control-label">Nome do Curso</label>
                         <input aria-describedby="addon-right addon-left" type="text" disabled="disabled" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-2">
                         <label class="control-label">Ano de Início</label>
                         <input aria-describedby="addon-right addon-left" type="text" class="form-control">
                       </div>
-
+ 
                       <div class="form-group col-md-3">
                         <label class="control-label">Previsão de Término</label>
                         <input aria-describedby="addon-right addon-left" type="email" class="form-control">
                       </div>
                     </div>
-
+ 
                     <br>
-
+ 
                     <div class="row">
                       <div class="form-group col-md-6">
-
+ 
                         <label>Perído de Ida</label>
-
+ 
                         <div class="table-responsive">
                           <table class="table table-md">
                             <thead>
@@ -215,7 +215,7 @@
                                 <th scope="col">Não Vou</th>
                               </tr>
                             </thead>
-
+ 
                             <tbody>
                               <tr *ngFor="let day of daysOfTheWeek">
                                 <th scope="row">{{day}}</th>
@@ -236,11 +236,11 @@
                           </table>
                         </div>
                       </div>
-
+ 
                       <div class="form-group col-md-6">
-
+ 
                         <label>Perído de Volta</label>
-
+ 
                         <div class="table-responsive">
                           <table class="table table-md">
                             <thead>
@@ -252,7 +252,7 @@
                                 <th scope="col">Não Vou</th>
                               </tr>
                             </thead>
-
+ 
                             <tbody>
                               <tr *ngFor="let day of daysOfTheWeek">
                                 <th scope="row">{{day}}</th>
@@ -274,7 +274,7 @@
                         </div>
                       </div>
                     </div>
-
+ 
                     <div class="text-center">
                       <button class="btn btn-info float-left" type="button" (click)="openVisualizationForms('institution', 'previous')">Anterior</button>
                       <button class="btn btn-info float-right" type="button" (click)="openVisualizationForms('institution', 'next')">Proximo</button>
@@ -282,8 +282,8 @@
                   </div>
                   <!--********************************DOCUMENTOS******************************* -->
                   <div *ngIf="visualizationDoc">
-                    <div class="row justify-content-end" style="margin-bottom:-3em">
-                      <div class="col-4" style="margin-right: 5px; font-size:16px; font-weight:bold">
+                    <div class="row justify-content-end">
+                      <div class="col-4" style="margin-bottom: 5px; font-size:16px; font-weight:bold">
                         Passo 4
                         <hr>
                       </div>
@@ -295,7 +295,7 @@
                           <input type="file" class="form-control-file" id="exampleInputFile">
                         </fieldset>
                       </div>
-
+ 
                       <div class="col-md-6">
                         <fieldset class="form-group">
                           <label for="exampleInputFile">CPF</label>
@@ -303,39 +303,39 @@
                         </fieldset>
                       </div>
                     </div>
-
+ 
                     <div class="row">
-                        <div class="col-md-6">
-                          <fieldset class="form-group">
-                            <label for="exampleInputFile">Conprovante de Residencia</label>
-                            <input type="file" class="form-control-file" id="exampleInputFile">
-                          </fieldset>
-                        </div>
-  
-                        <div class="col-md-6">
-                          <fieldset class="form-group">
-                            <label for="exampleInputFile">Comprovante de Matricula</label>
-                            <input type="file" class="form-control-file" id="exampleInputFile">
-                          </fieldset>
-                        </div>
+                      <div class="col-md-6">
+                        <fieldset class="form-group">
+                          <label for="exampleInputFile">Conprovante de Residencia</label>
+                          <input type="file" class="form-control-file" id="exampleInputFile">
+                        </fieldset>
                       </div>
-
-                      <div class="row">
-                          <div class="col-md-6">
-                            <fieldset class="form-group">
-                              <label for="exampleInputFile">Cadastro Municipal</label>
-                              <input type="file" class="form-control-file" id="exampleInputFile">
-                            </fieldset>
-                          </div>
-    
-                          <div class="col-md-6">
-                            <fieldset class="form-group">
-                              <label for="exampleInputFile">Foto 3x4</label>
-                              <input type="file" class="form-control-file" id="exampleInputFile">
-                            </fieldset>
-                          </div>
-                        </div>
-
+ 
+                      <div class="col-md-6">
+                        <fieldset class="form-group">
+                          <label for="exampleInputFile">Comprovante de Matricula</label>
+                          <input type="file" class="form-control-file" id="exampleInputFile">
+                        </fieldset>
+                      </div>
+                    </div>
+ 
+                    <div class="row">
+                      <div class="col-md-6">
+                        <fieldset class="form-group">
+                          <label for="exampleInputFile">Cadastro Municipal</label>
+                          <input type="file" class="form-control-file" id="exampleInputFile">
+                        </fieldset>
+                      </div>
+ 
+                      <div class="col-md-6">
+                        <fieldset class="form-group">
+                          <label for="exampleInputFile">Foto 3x4</label>
+                          <input type="file" class="form-control-file" id="exampleInputFile">
+                        </fieldset>
+                      </div>
+                    </div>
+ 
                     <div class="text-center">
                       <button type="submit" class="btn btn-info float-right">Cadastrar</button>
                       <button type="button" class="btn btn-info float-left" (click)="openVisualizationForms('documents', 'previous')">Anterior</button>
@@ -343,7 +343,7 @@
                   </div>
                 </div>
               </form>
-
+ 
             </div>
           </div>
         </div>
